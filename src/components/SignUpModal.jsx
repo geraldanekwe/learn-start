@@ -59,14 +59,15 @@ class SignUpModal extends Component {
 
     render() {
         const { isEmailValid, isPasswordValid } = this.state;
+        const close_icon = "\u2573";
         return (
           <div>
             <Modal
               isOpen={this.props.isModalOpen}
               onRequestClose={this.props.closeModal}
-              style={customStyles}
-              contentLabel="Example Modal"
+              className="modal"
               >
+              <p className="close-icon" onClick={this.props.closeModal}>{close_icon}</p>
               <h2>Sign up</h2>
               <form onSubmit={this.handleSubmit}>
                 <input

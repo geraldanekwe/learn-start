@@ -129,7 +129,36 @@ input {
   background-color: #8F8E8B;
 }
 
-@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  border: 1px solid rgb(204, 204, 204);
+  background: rgb(255, 255, 255);
+  overflow: auto;
+  border-radius: 4px;
+  outline: none;
+  padding: 20px;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  width: 360px;
+  height: 262.5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.close-icon {
+  align-self: flex-end;
+  margin-top: -15px;
+  margin-right: -10px;
+}
+
+
+@media only screen and (max-width: 667px){
   h1 {
     font-size: 30px;
     font-weight: normal;
@@ -150,12 +179,7 @@ input {
     font-size: 13px;
   }
 
-  .header {
-    width: 46vw;
-  }
-
   .first-section {
-    width: 46%;
     height: 550px;
     justify-content: unset;
     align-items: center;
@@ -167,16 +191,14 @@ input {
   }
 
   .panel {
-    width: 46%;
     height: 212.5px;
   }
 
   .panel > p {
-    width: 385px !important;
+    width: 80% !important;
   }
 
   .third-section {
-    width: 46%;
     height: 1550px;
   }
 
@@ -199,6 +221,7 @@ input {
   }
 
   .box {
+    width: 100vw;
     height: 350px;
   }
 
@@ -209,7 +232,18 @@ input {
   }
 
   .sub-section-text > p {
-    width: 370px !important;
+    width: auto !important;
   }
 
+  .modal {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: unset;
+    align-items: center;
+  }
+
+  .close-icon {
+    margin: 5px 0;
+  }
 }
