@@ -10,7 +10,7 @@ class Home extends Component {
             <div className="first-section">
               <h1 style={ { marginBottom: '20px' } }>Stay hungry. Stay foolish.</h1>
               <p style={ { marginBottom: '32.5px' } }>Learn from the hottest startups in the world.</p>
-              <button><Link className="nostyle" to="/stories">Read Now</Link></button>
+              <Link className="nostyle" to="/stories"><button>Read Now</button></Link>
             </div>
             <div className="panel">
               <h2 style={ { marginBottom: '30px' } }>Smart tools for founders.</h2>
@@ -41,7 +41,7 @@ class Home extends Component {
             </div>
             <div className="panel">
               <h2 style={ { marginBottom: '30px' } }>Let's get started.</h2>
-              <button><Link className="nostyle" to="/stories">Read Now</Link></button>
+              <Link className="nostyle" to="/stories"><button>Read Now</button></Link>
             </div>
           </div>
         );
