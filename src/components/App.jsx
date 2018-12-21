@@ -1,17 +1,24 @@
 import React, { Component } from 'react';
-import logo from '../assets/images/logo.svg';
-import Header from './Header.jsx';
+import { Route, Switch } from 'react-router-dom';
 import Home from './Home.jsx';
+import Stories from './Stories.jsx';
 
 class App extends Component {
-    render() {
-        return (
-            <div className="App">
-              <Header />
-              <Home />
-            </div>
-        );
-    }
+  render() {
+    const App = () => (
+      <div>
+        <Switch>
+          <Route exact path='/' component={Home}/>
+          <Route path='/stories' component={Stories}/>
+        </Switch>
+      </div>
+    )
+    return (
+      <Switch>
+        <App/>
+      </Switch>
+    );
+  }
 }
 
 export default App;

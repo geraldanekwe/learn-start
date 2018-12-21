@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom'
+import Header from './Header.jsx';
 
 class Home extends Component {
     render() {
         return (
           <div className="home">
+            <Header />
             <div className="first-section">
               <h1 style={ { marginBottom: '20px' } }>Stay hungry. Stay foolish.</h1>
               <p style={ { marginBottom: '32.5px' } }>Learn from the hottest startups in the world.</p>
-              <button>Read Now</button>
+              <button><Link className="nostyle" to="/stories">Read Now</Link></button>
             </div>
             <div className="panel">
               <h2 style={ { marginBottom: '30px' } }>Smart tools for founders.</h2>
@@ -38,7 +41,7 @@ class Home extends Component {
             </div>
             <div className="panel">
               <h2 style={ { marginBottom: '30px' } }>Let's get started.</h2>
-              <button>Read Now</button>
+              <button><Link className="nostyle" to="/stories">Read Now</Link></button>
             </div>
           </div>
         );
